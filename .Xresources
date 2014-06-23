@@ -1,0 +1,28 @@
+URxvt.perl-ext-common: mark-urls,default,matcher,clipboard,font-size
+
+URxvt.saveLines: 10000
+URxvt.scrollBar: false
+URxvt*inheritPixmap: true
+URxvt*shading: 10
+URxvt.foreground: white
+URxvt.background: black
+URxvt.secondaryScroll: true
+# Font size
+URxvt.keysym.C-Up:    perl:font-size:increase
+URxvt.keysym.C-Down:  perl:font-size:decrease
+URxvt.keysym.C-Right: perl:font-size:incglobal
+URxvt.keysym.C-Left:  perl:font-size:decglobal
+URxvt.font-size.step: 2
+# Font
+URxvt.font:             xft:Inconsolata for Powerline:pixelsize=13:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=13:antialias=true,hinting=true
+URxvt.boldFont:         xft:inconsolata:pixelsize=13:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=13:antialias=true,hinting=true
+URxvt.italicFont:       xft:inconsolata:pixelsize=13:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=13:antialias=true,hinting=true
+URxvt.bolditalicFont:   xft:inconsolata:pixelsize=13:antialias=true:hinting=true, xft:dejavu sans mono:pixelsize=13:antialias=true,hinting=true
+
+# URLs
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.matcher.button: 1
+URxvt.colorUL: #4682B4
+# Home & End Keys
+URxvt*keysym.Home: \033[7~
+URxvt*keysym.End: \033[8~
