@@ -1,0 +1,17 @@
+if [ -f ~/.zsh_aliases ]; then
+	. ~/.zsh_aliases
+fi
+
+if [ -f "${HOME}/.gpg-agent-info" ]; then
+	. "${HOME}/.gpg-agent-info"
+	export GPG_AGENT_INFO
+	export SSH_AUTH_SOCK
+fi
+
+export EDITOR=vim
+
+PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
+PATH="$PATH:/opt/android-sdk/tools/:/opt/android-sdk/platform-tools/"
+
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
