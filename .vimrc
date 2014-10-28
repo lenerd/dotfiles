@@ -11,7 +11,10 @@ Plugin 'gmarik/vundle'
 " The bundles you install will be listed here
 "" status bar
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"" git integration
 Plugin 'tpope/vim-fugitive'
+"" mercurial integration
+Plugin 'ludovicchabant/vim-lawrencium'
 "" file browser
 Plugin 'scrooloose/nerdtree'
 "" python support
@@ -26,8 +29,12 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/MatchTagAlways'
 "" special qt syntax
 Plugin 'https://bitbucket.org/kh3phr3n/vim-qt-syntax.git'
-" vim latexsuite
+"" vim latexsuite
 Plugin 'http://git.code.sf.net/p/vim-latex/vim-latex'
+"" jinja2 syntax
+Plugin 'Glench/Vim-Jinja2-Syntax'
+"" indent level display
+Plugin 'nathanaelkane/vim-indent-guides'
 
 filetype plugin indent on
 
@@ -120,8 +127,15 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Misc
 "------
 
+" spell checking
+" Wann geladen wird              # Maske   # Aktivieren      # Zu verwendende Sprache
+au BufNewFile,BufRead,BufEnter   *.md      setlocal spell    spelllang=de_de
+au BufNewFile,BufRead,BufEnter   *.txt     setlocal spell    spelllang=de_de
+au BufNewFile,BufRead,BufEnter   *.tex     setlocal spell    spelllang=de_de
+
 " code completion (YouCompleteMe)
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Use ö to toggle display of whitespace
 nmap ö :set list!<CR>
