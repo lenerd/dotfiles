@@ -55,6 +55,7 @@ set laststatus=2
 
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
+map <F4> :setlocal spell! spelllang=de_de<CR>
 
 "--------
 " Python
@@ -140,7 +141,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " Use ö to toggle display of whitespace
 nmap ö :set list!<CR>
 " And set some nice chars to do it with
-set listchars=tab:»\ ,eol:¬
+set listchars=tab:»\ ,eol:¬,trail:·,nbsp:~
 
 " I'm prefer spaces to tabs
 set tabstop=4
@@ -172,4 +173,4 @@ map <m-j> <c-w>j
 map <m-k> <c-w>k
 map <m-l> <c-w>l
 
-nnoremap <c-j> <Plug>IMAP_JumpForward
+" nnoremap <c-j> <Plug>IMAP_JumpForward
