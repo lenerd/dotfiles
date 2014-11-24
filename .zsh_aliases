@@ -1,0 +1,13 @@
+alias ls='ls -h --color'
+alias ll='ls -l'
+alias la='ls -la'
+
+alias fbisearch="ssh fbi /home/j2007/7fietkau/pub/person"
+
+alias gis='git status'
+
+alias dmesg='dmesg -HL'
+
+alias weatherh='weather -u celsius hamburg'
+
+alias mounts='mount | column -t'
